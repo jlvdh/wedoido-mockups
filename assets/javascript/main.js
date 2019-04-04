@@ -1,7 +1,7 @@
 var chapters = [];
 
 var Chapter = function(element) {
-    this.current = 1;
+    this.current = 0;
     this.element = element;
     this.slides = this.element.getElementsByClassName('vendor-container');
 }
@@ -41,14 +41,21 @@ window.onload = function() {
     var chapterElements = document.getElementsByClassName('chapter');
 
     for (var i=0; i < chapterElements.length; i++) {
-        chapters.push(new Chapter(chapterElements[i]))
+        var chapter = new Chapter(chapterElements[i]);
+
+        chapters.push(chapter)
         var scrollElements = chapters[i].element.getElementsByClassName('scroll')
 
+
         //left
-        scrollElements[0].addEventListener('click', chapters[i].previous)
+        scrollElements[0].addEventListener('click', function() {
+            chapter.previous();
+        })
 
         //right
-        scrollElements[1].addEventListener('click', chapters[i].next)
+        scrollElements[1].addEventListener('click', function() {
+            chapter.next();
+        });
     }
     // for each chapter add listener with right index
     // add eventlisteners
