@@ -56,11 +56,8 @@ window.onload = function() {
 
         //left
         scrollElements[0].addEventListener('click', function() {
-            //TODO click events not working correctly: address from click event
-            console.log(i)
-            chapters[i].previous();
-            console.log("click")
-            console.log(chapter);
+            //TODO click events not working correctly: address from clickevent
+            chapter.previous();
         })
 
         //right
