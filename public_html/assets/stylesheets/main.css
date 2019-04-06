@@ -16,7 +16,7 @@
   body {
       font-family: "architectura";
       font-size: 10px;
-      font-weight: 600;
+      font-weight: 100;
   }
 
   ul {
@@ -72,11 +72,18 @@
  * 
  */
  
+ .chapter-menu {
+    position: sticky;
+    top: 0;
+    background-color: white;
+ }
+
 .chapter-navigation {
     font-family: "Chiswick Sans Poster";
     font-size: 1.8em;
     width: 77%;
     margin: 0 auto;
+    top: 0;
 }
 
 .chapter-navigation .active {
@@ -123,6 +130,7 @@
 .vendor-container {
     width: 80%;
     margin: 0 auto;
+    display: none;
 }
 
 .scroll {
@@ -171,6 +179,7 @@
     font-family: "Chiswick Sans Poster";
     line-height: 1em;
     margin: 0px;
+    font-weight: 100;
 }
 .vendor-block-image {
     width: 60%;

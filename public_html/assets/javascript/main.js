@@ -14,26 +14,35 @@ Chapter.prototype.setCurrent = function (change) {
     // if (this.current + change > this.element.length || this.current + change)
 }
 Chapter.prototype.previous = function () {
+    this.hide(this.current);
+
     if (this.current > 0) {
         this.current--
     } else {
-        this.current = this.slides.length;
+        this.current = this.slides.length - 1;
     }
-    this.slides[this.current].style.display = "block";
+    this.show(this.current); 
 }
 
 Chapter.prototype.next = function () {
-    if (this.current < this.slides.length) {
+
+    this.hide(this.current);
+
+    if (this.current < (this.slides.length - 1)) {
         this.current++
     } else {
         this.current = 0;
     }
-    this.slides[this.current].style.display = "block";
+    this.show(this.current);
 }
 
-// Chapter.prototype.show = function(chapterNumber) {
+Chapter.prototype.hide = function(slideIndex) {
+    this.slides[slideIndex].style.display = "none";
+}
 
-// }
+Chapter.prototype.show = function(slideIndex) {
+    this.slides[slideIndex].style.display = "block";
+}
 
 
 window.onload = function() {
@@ -42,7 +51,6 @@ window.onload = function() {
 
     for (var i=0; i < chapterElements.length; i++) {
         var chapter = new Chapter(chapterElements[i]);
-
         chapters.push(chapter)
         var scrollElements = chapters[i].element.getElementsByClassName('scroll')
 
@@ -56,7 +64,10 @@ window.onload = function() {
         scrollElements[1].addEventListener('click', function() {
             chapter.next();
         });
+        chapter.show(0);
     }
+
+
     // for each chapter add listener with right index
     // add eventlisteners
 }
