@@ -54,10 +54,13 @@ window.onload = function() {
         chapters.push(chapter)
         var scrollElements = chapters[i].element.getElementsByClassName('scroll')
 
-
         //left
         scrollElements[0].addEventListener('click', function() {
-            chapter.previous();
+            //TODO click events not working correctly: address from click event
+            console.log(i)
+            chapters[i].previous();
+            console.log("click")
+            console.log(chapter);
         })
 
         //right

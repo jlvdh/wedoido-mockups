@@ -65,6 +65,10 @@
  * chapter
  */
 
+.chapter {
+    margin-bottom: 5%;
+}
+
 .chapter-option {
     display:flex;
 }
