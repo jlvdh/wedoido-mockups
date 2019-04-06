@@ -16,8 +16,28 @@
   body {
       font-family: "architectura";
       font-size: 10px;
+      font-weight: 600;
   }
 
+  ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+  }
+
+  /**
+   * general styles
+   */
+
+.thin-button {
+    border: 1px solid black;
+    background-color: Transparent;
+    padding: 0.5rem 2rem;
+    font-family: "architectura";
+    font-size: 1.2rem;
+    height: 3rem;
+}
   /**
    * header 
    */
@@ -32,12 +52,12 @@
     font-family: "architectura";
     font-size: 4em;
     width: 40%;
-    margin: 3em auto 1em auto;
+    margin: 5% auto 2% auto;
     text-align: center;
 }
 
 #heart {
-    margin: 0 auto;
+    margin: 0 auto 3% auto;
     display: block;
 }
 
@@ -48,7 +68,35 @@
 .chapter-option {
     display:flex;
 }
+/**
+ * 
+ */
+ 
+.chapter-navigation {
+    font-family: "Chiswick Sans Poster";
+    font-size: 1.8em;
+    width: 77%;
+    margin: 0 auto;
+}
 
+.chapter-navigation .active {
+    color: #0855BC;
+}
+
+.chapter-navigation li {
+    margin: 0 0.8em 0.6em 0;
+    color:#7D7C7C;
+}
+
+.in-option {
+    display: inline-block;
+    font-size: 1.8em;
+    margin: 0 0 0 1%;
+}
+
+.vendor-header .thin-button {
+    margin: 0 0 0 1%;
+}
 /**
  * vendors
  */
@@ -58,11 +106,18 @@
      line-height: 1em;
      width:100%;
  }
- .vendor-blocks header h2 {
-    font-size: 1.8em
+
+.vendor-header {
+    display: flex;
+    width: 77%;
+    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: center;
 }
-.vendor-blocks header h1 {
-    font-size: 4.8em
+.vendor-header h1 {
+    font-size: 4.8em;
+    font-family: "Chiswick Sans Poster";
+    margin: 0px auto 0px 0px;
 }
 
 .vendor-container {
@@ -82,7 +137,7 @@
 }
   
 
- .vendor-container > header img {
+.vendor-block-header img{
      width: 100%
      /* margin: 0 auto; */
  }
@@ -100,35 +155,61 @@
 
 .vendor-block-text {
     width: 32%;
-    padding: 0em 2em 0em 2em;
+    padding: 2rem;
     font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vendor-block-text h2, .vendor-block-text p {
+    /* margin-bottom: auto; */
 }
 
 .vendor-block-text h2 {
     font-size: 3.6em;
     font-family: "Chiswick Sans Poster";
     line-height: 1em;
+    margin: 0px;
 }
 .vendor-block-image {
     width: 60%;
     overflow: hidden;
 }
 
-.vendor-block img {
+.vendor-block-image img {
     width: 100%;
-    /* margin: 2em; */
 }
 
 .pinkbg {
     background-color: #FFD0C4;
 }
 
-.additional-information {
-    border: 1px solid black;
-    background-color: Transparent;
-    padding: 0.5em;
-    font-family: "architectura";
+.facilities {
+    flex-wrap: wrap;
+}
+.facilities li {
     font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.facilities li img {
+    margin-right: 0.4em;
+}
+
+.ratings {
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+}
+.ratings li{
+    width: 50%;
+}
+
+.testimonial {
+    font-size: 1.6rem;
+    font-family: "Chiswick Sans Poster";
 }
 
 /**
