@@ -12,13 +12,11 @@ var Chapter = function(element) {
   this.slides = this.element.getElementsByClassName("vendor-container");
 };
 
-Chapter.prototype.setCurrent = function(change) {
-  if (change !== 1 || change !== 1) {
-    return;
-  }
+Chapter.prototype.setTitle = function() {
+  var title = this.slides[this.current].getElementsByClassName('venue-name')[0].value;
+  this.element.parentElement.getElementsByClassName('vendor-title')[0].innerHTML = title
+}
 
-  // if (this.current + change > this.element.length || this.current + change)
-};
 Chapter.prototype.previous = function() {
   this.hide(this.current);
 
@@ -27,6 +25,7 @@ Chapter.prototype.previous = function() {
   } else {
     this.current = this.slides.length - 1;
   }
+  this.setTitle()
   this.show(this.current);
 };
 
@@ -38,6 +37,7 @@ Chapter.prototype.next = function() {
   } else {
     this.current = 0;
   }
+  this.setTitle()
   this.show(this.current);
 };
 
