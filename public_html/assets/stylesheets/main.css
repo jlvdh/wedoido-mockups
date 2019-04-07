@@ -56,7 +56,7 @@
     text-align: center;
 }
 
-#heart {
+.heart {
     margin: 0 auto 3% auto;
     display: block;
 }
