@@ -80,6 +80,7 @@
     position: sticky;
     top: 0;
     background-color: white;
+    z-index: 999;
  }
 
 .chapter-navigation {
@@ -88,21 +89,41 @@
     width: 77%;
     margin: 0 auto;
     top: 0;
+    padding-top: 1%;
 }
 
 .chapter-navigation .active {
     color: #0855BC;
 }
 
-.chapter-navigation li {
-    margin: 0 0.8em 0.6em 0;
+.chapter-navigation a {
+    text-decoration: none;
     color:#7D7C7C;
+}
+
+.chapter-navigation a:hover {
+    text-decoration: none;
+    color:#0855BC;
+}
+
+
+.chapter-navigation li {
+    margin: 0 2% 1% 0;
 }
 
 .in-option {
     display: inline-block;
     font-size: 1.8em;
     margin: 0 0 0 1%;
+}
+
+.extend {
+    text-decoration: underline;
+    color:#7D7C7C;
+}
+
+.extend:hover {
+    color:#0855BC;
 }
 
 .vendor-header .thin-button {
@@ -174,8 +195,8 @@
     justify-content: space-between;
 }
 
-.vendor-block-text h2, .vendor-block-text p {
-    /* margin-bottom: auto; */
+ .vendor-block-text p {
+    margin: 0;
 }
 
 .vendor-block-text h2 {
@@ -218,6 +239,7 @@
 }
 .ratings li{
     width: 50%;
+    margin: 0 2%;
 }
 
 .testimonial {

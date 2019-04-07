@@ -11,6 +11,8 @@
       media="screen"
       href="assets/stylesheets/main.css"
     />
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="assets/javascript/main.js"></script>
   </head>
 
@@ -23,16 +25,16 @@
     <img src="assets/images/heart.png" alt="heart" id="heart" />
 
     <!-- chapter beginning -->
-    <div class="chapter-menu">
+    <div class="chapter-menu" id="venue">
       <ul class="chapter-navigation">
-        <li class="active">The venue</li>
-        <li>The catering</li>
-        <li>Photography</li>
+        <li class="active">Venue</li>
+        <li><a data-scroll href="#catering">Catering</a></li>
+        <li><a data-scroll href="#Photography">Photography</a></li>
       </ul>
       <header class="vendor-header">
         <h1>The Grand Plaza</h1>
 
-        <p class="in-option ">in option for 3 more days <br /><b>extend?</b></p>
+        <p class="in-option ">in option for 3 more days <br /><a href="#" class="extend">extend?</a></p>
         <button class="thin-button">
           SCHEDULE VISIT
         </button>
@@ -395,7 +397,7 @@
     <img src="assets/images/heart.png" alt="heart" id="heart" />
 
         <!-- chapter beginning -->
-        <div class="chapter-menu">
+        <div class="chapter-menu" id="catering">
             <ul class="chapter-navigation">
               <li>The venue</li>
               <li class="active">The catering</li>
